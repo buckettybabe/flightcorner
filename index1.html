@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>Passenger Details</title>  
+        <link href='./style.css' rel='stylesheet'>
+        <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+>
+
+<!-- jQuery library -->
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+></script>
+
+<!-- Popper JS -->
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+></script>
+
+<!-- Latest compiled JavaScript -->
+<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+></script>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+    </head>
+ <body class="page1">
+  <div class="grid2">
+    <div class="home"><a href="index.html">Home</a></div>
+    <div class="gallery"><a href="index3.html">Travel Deals</a></div>
+    <div class="login"><a href="index4.html">Login</a></div>
+    <div class="contact"><a href="contact.html">Contact</a></div>
+</div>
+    
+
+  <div class="container"><!--container-->
+    <form action="index2.html" class="needs-validation" novalidate> 
+     <!-- <form class="form-group">-->
+          <h1 class="text-center">Airline Booking Form</h1>
+
+          <div id="form"><!--form-->
+             
+          <div id="input"><!--input-->
+            <br>
+            <label for="airline" id="input-group"><i class="material-icons">&#xe53d;</i>Preferred Airline:</label>
+              <select name="airline" id="input-group" selected="" value="Default"> 
+                  <option value="">IndoGo</option>
+                  <option value="">AirIndia</option>
+                  <option value="">SpaceJet</option>
+              </select>
+            
+            <br>
+            <label for="seatclass" id="input-group"><i class="material-icons">&#xe637;</i>Preferred Seating:</label>
+              <select name="seatclass" id="input-group" selected="" value="Default">
+                  <option value="">Economy Class</option>
+                  <option value="">Business Class</option>
+                  <option value="">First Class</option>
+              </select>
+              
+              </div>
+              <br>
+
+<!--<label for="numadults" id="input-group">Number of Adults:</label>-->
+              <div id="input2"><!--input2-->
+                  <input type="number" name="numadults" id="input-group" placeholder="No. of Adults" min="0">
+                  <input type="number" id="input-group" placeholder="Children (2-11 years)" min="0">
+                 <input type="number" name="infant" id="input-group" placeholder="Infants (under 2 years)" min="0">
+              </div><!--input2-->
+
+              <br>
+              <div id="input6"><!--input6-->
+                <label for="fanme" id="input-group">Main Passenger First Name:</label>
+                <input type="text" name="fname" id="input-group" required>
+                    <div class="invalid-feedback">Please enter your first name.</div>
+
+                <label for="lanme" id="input-group">Main Passenger Second Name:</label>
+                <input type="text" name="lname" id="input-group" required>
+                    <div class="invalid-feedback">Please enter your second name.</div>
+                  <br>
+                  <br>
+                  <div id="input3"><!--input3-->
+                    <label for="r" style="bold" >Gender:</label> 
+                    <input type="radio" name="r" >
+                    <label for="r">Male</label>
+                    <input type="radio"  name="r" >
+                    <label for="r">Female</label>
+                    <input type="radio" name="r" >
+                    <label for="r">Other</label>
+                </div><!--input3-->
+<br>
+                <label for="p1age">Age:</label>
+                    <input type="number" name="p1age" min="18" required>
+                    <div class="invalid-feedback">Please enter your age. You must be over 18 to make a booking.</div> 
+                    <br>
+                    <br>
+
+        <!-- address-->
+                <div>
+                    <label for="address"><i class="material-icons">&#xe563;</i>Full Home Address:</label>
+                    <textarea class="form-control" rows="2" id="address" name ="address" required></textarea>
+                    <div class="invalid-feedback">Please enter your full address.</div> 
+                </div>
+                <br>
+                <!-- 
+                    Country. took this out because not part of the brief and it was not looking good
+                    <select name="country">
+                        <option selected="" value="Default">(Please select a country)</option>
+                        <option value="AF">Australia</option>
+                        <option value="AL">Canada</option>
+                        <option value="DZ">India</option>
+                        <option value="AS">Russia</option>
+                        <option value="AD">USA</option></select>
+                        <br> -->
+                    <!-- phone-->
+                <div>
+                    <label for="phone"> <i class="material-icons">&#xe324;</i>Mobile phone: </label>
+                    <input type="phone" class="form-control" id="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" size="30" required>
+                    <div class="invalid-feedback">Please enter your mobile number.</div>
+                </div>
+<br>
+                <!-- email-->
+                    <label for="email"> <i class="material-icons">&#xe554;</i>Email: </label>
+                    <input type="email" id="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" required>
+                        <div class="invalid-feedback">Please enter your email address.</div>
+                        <br>
+                
+                <label for="foodpref"><i class="material-icons">&#xe561;</i>Food Preferences</label>
+                <select name="foodpref">
+                  <option selected="" value="Default">Options:</option>
+                  <option value="AF">Vegetarian</option>
+                  <option value="AL"><Non-Vegetarian>Non-Vegetarian</option>
+                  <option value="DZ"><Jain-Meal>Jain-Meal</option>
+                <option value="KO"><Kosher-Meal>Kosher-Meal</option>
+                <option value="HL"><Halal-Meal>Halal-Meal</option>
+                  </select>
+                  <br>
+
+
+                
+                       <!-- payment type is compulsory-->
+                      <label for="m_payment"><i class="material-icons">&#xe8a1;</i>Payment Option:</label> 
+                      <select id="m_payment" name="payment" required>
+                          <option value="creditcard">Credit Card</option>
+                          <option value="mastercard">Master Card</option>
+                          <option value="visacard">visa Card</option>
+                      </select> 
+                      <div class="invalid-feedback">Please fill out this field.</div>
+                      <br><br>
+
+              </div><!--input6-->
+              <button type="submit" class="btn btn-primary">Submit Form</button>
+              <button type="reset" class="btn btn-primary">Clear Form</button>
+          </div><!--form-->
+
+     </form>
+    </div><!--container- that the form is in-->
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+    </body>
+</html>
